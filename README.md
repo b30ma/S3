@@ -25,3 +25,13 @@ here are several tools and approaches you can use to decrease S3 costing in AWS:
 11- S3 Cost Optimization Tools: Leverage third-party tools and services like CloudCheckr, CloudHealth, or AWS Trusted Advisor, which offer advanced cost optimization features and recommendations specifically for S3 and other AWS services.
 
 By implementing these strategies and utilizing the available tools, you can effectively reduce S3 costs and optimize your storage expenses in AWS.
+
+### Note 
+
+In function.py code snippet, all the objects in the specified bucket are copied to the Infrequent Access (IA) storage class using copy_object and then deleted from the standard storage class using delete_object. This transition helps reduce storage costs for objects that are infrequently accessed.
+
+Note: Be cautious when deleting or moving objects, and ensure you have proper backups or archives in place before making any changes.
+
+You can customize and combine these code snippets with other cost optimization techniques mentioned earlier, such as lifecycle policies or object size optimization, based on your specific requirements and cost reduction goals.
+
+Remember to have the necessary permissions and configure your AWS credentials (access key and secret key) to run the code successfully.
